@@ -1,0 +1,78 @@
+<%- include('layout') -%> 
+<br /><br /><br />
+<div class="container">
+  <h2><%= title %></h2>
+  <form action="/paciente/add" method="post">
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label" for="cpf">CPF:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          id="cpf"
+          name="cpf"
+          pattern="\d{11}" 
+          title="Digite um CPF com 11 dígitos"
+          placeholder="Digite o CPF"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label" for="nome">Nome Completo:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Digite o nome completo"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label" for="idade">Idade:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="number"
+          id="idade"
+          name="idade"
+          min="0"
+          placeholder="Digite a idade"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label" for="diaMarcado">Dia Marcado:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="date"
+          id="diaMarcado"
+          name="diaMarcado"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label class="col-sm-2 col-form-label" for="horaMarcada">Hora Marcada:</label>
+      <div class="col-sm-10">
+        <input
+          class="form-control form-control-lg"
+          type="time"
+          id="horaMarcada"
+          name="horaMarcada"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-sm-10 offset-sm-2">
+        <input class="btn btn-primary" type="submit" value="Adicionar Paciente" />
+      </div>
+    </div>
+  </form>
+</div>
